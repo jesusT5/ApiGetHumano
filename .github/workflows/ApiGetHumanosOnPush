@@ -1,21 +1,24 @@
-name: ApiGetHumanosOnPush
+name: dotnet package
 
 on: [push]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
-    steps: 
-      - name: Get Code
-        uses: actions/checkout@v3
-      - name: Setup dotnet
-        uses: actions/dotnet@v3
-        with: 
-          dotnet-version: '5.0.x'
+    strategy:
+      matrix:
+        dotnet-version: [ '3.1.x','5.0.x', '6.0.x' ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build
-      - name: Test with the dotnet CLI
-        run: dotnet test
-          
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
