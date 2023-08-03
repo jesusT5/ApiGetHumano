@@ -1,0 +1,8 @@
+name: ApiGetHumanosOnPush
+on: push
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps: 
+      -name: Get Code
+      -run: 
