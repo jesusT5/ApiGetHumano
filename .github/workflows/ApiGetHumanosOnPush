@@ -1,7 +1,7 @@
 name: ApiGetHumanosOnPush
-on: push
+on: [push]
 jobs:
-  compile:
+  build:
     runs-on: ubuntu-latest
     steps: 
       - name: Get Code
@@ -10,7 +10,7 @@ jobs:
         uses: actions/dotnet@v3
         with: 
           dotnet-version: '5.0.x'
-      - name:Install dependencies
+      - name: Install dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build
