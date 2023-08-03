@@ -6,3 +6,9 @@ ApiGetHumano/obj/Debug/netcoreapp3.0/ApiGetHumano.assets.cache
 ApiGetHumano/obj/project.assets.json
 ApiGetHumano/obj/Debug/netcoreapp3.0/ApiGetHumano.csprojAssemblyReference.cache
 ApiGetHumano/obj/project.nuget.cache
+*.cache
+.vs
+ApiGetHumano/obj
+ApiGetHumano/obj/Debug/netcoreapp3.0/ApiGetHumano.AssemblyInfo.cs
+ApiGetHumano/obj/Debug/netcoreapp3.0/ApiGetHumano.assets.cache
+ApiGetHumano/obj/Debug/netcoreapp3.0/ApiGetHumano.AssemblyInfoInputs.cache
