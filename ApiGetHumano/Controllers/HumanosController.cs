@@ -26,7 +26,7 @@ namespace ApiGetHumano.Controllers
             new Humano { Id = 1, Altura = 187, Edad = 31, Nombre = "Jesus3", Peso = 100, Sexo = "Masculino" },
             new Humano { Id = 1, Altura = 187, Edad = 31, Nombre = "Jesus4", Peso = 100, Sexo = "Masculino" },
             new Humano { Id = 1, Altura = 187, Edad = 31, Nombre = "Jesus5", Peso = 100, Sexo = "Masculino" }
-            });
+            })
         }
 
         // GET: Humanos/GetHumanoById/5
